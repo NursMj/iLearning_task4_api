@@ -36,6 +36,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.get("/", (req,res)=> {
+  res.send("Hello there! Api is working")
+})
+
 const port = 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
